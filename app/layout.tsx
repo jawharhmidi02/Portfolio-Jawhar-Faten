@@ -20,7 +20,6 @@ export const metadata: Metadata = {
       "Two passionate developers creating digital excellence together",
     type: "website",
   },
-  generator: "v0.dev",
 };
 
 export default function RootLayout({
@@ -30,6 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
