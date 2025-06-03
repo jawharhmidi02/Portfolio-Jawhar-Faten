@@ -1,0 +1,102 @@
+/* Navigation Menu Animations */
+@keyframes nav-item-hover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nav-item-hover:hover {
+  animation: nav-item-hover 0.5s ease;
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-appear {
+  animation: menu-appear 0.3s ease forwards;
+}
+
+@keyframes underline-expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.underline-expand {
+  animation: underline-expand 0.3s ease forwards;
+}
+
+/* Mobile Menu Animation */
+@keyframes mobile-menu-slide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu-slide-in {
+  animation: mobile-menu-slide 0.3s ease forwards;
+}
+
+.mobile-menu-slide-out {
+  animation: mobile-menu-slide 0.3s ease reverse forwards;
+}
+
+/* Navbar Background Animation */
+@keyframes navbar-bg-fade {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.navbar-bg-fade {
+  animation: navbar-bg-fade 0.3s ease forwards;
+}
+
+/* Dark mode version */
+@keyframes navbar-bg-fade-dark {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+  }
+  to {
+    background-color: rgba(17, 24, 39, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.dark .navbar-bg-fade {
+  animation: navbar-bg-fade-dark 0.3s ease forwards;
+}
