@@ -10,7 +10,7 @@ export const teamData = {
     portfolio: "https://jawharhmidi.vercel.app/",
     github: "https://github.com/jawharhmidi02",
     linkedin: "https://linkedin.com/in/jawharhmidi",
-    avatar: "/placeholder.svg?height=64&width=64",
+    avatar: "/jawhar-pfp.jpg",
   },
   faten: {
     name: "Faten Selmi",
@@ -23,7 +23,7 @@ export const teamData = {
     portfolio: "https://fatenselmi.vercel.app/",
     github: "https://github.com/selmifaten",
     linkedin: "https://linkedin.com/in/fatenselmi",
-    avatar: "/placeholder.svg?height=64&width=64",
+    avatar: "/faten-pfp.jpg",
   },
   synergy: {
     email: "synergy@team.dev",

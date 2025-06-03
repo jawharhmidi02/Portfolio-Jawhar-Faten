@@ -90,6 +90,7 @@ export function HeroSection() {
               <Avatar className="w-20 h-20 mx-auto mb-4 ring-4 ring-blue-500/30 group-hover:ring-blue-500/60 transition-all duration-300 group-hover:scale-110">
                 <AvatarImage
                   src={teamData.jawhar.avatar || "/placeholder.svg"}
+                  className="object-cover"
                   alt="Jawhar"
                 />
                 <AvatarFallback className="bg-blue-500 text-white text-lg">
