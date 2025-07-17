@@ -2,6 +2,27 @@ import { translations } from "@/app/translations";
 
 export const projectsData = [
   {
+    title: "Reservy",
+    description: translations.en.projects.reservy,
+    tech: ["Next.js", "NestJS", "PostgreSQL", "TypeORM", "Tailwind CSS"],
+    image: "/reservy-hotel.png",
+    link: "https://reservy-hotel.vercel.app/",
+  },
+  {
+    title: "Golden Brand",
+    description: translations.en.projects.goldenbrand,
+    tech: ["Next.js", "NestJS", "PostgreSQL", "TypeORM", "Tailwind CSS"],
+    image: "/golden-brand.png",
+    link: "https://www.goldenbrandqa.com/",
+  },
+  {
+    title: "Al Arabiya",
+    description: translations.en.projects.arabiya,
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Tailwind CSS"],
+    image: "/al-arabiya.png",
+    link: "https://al-arabiya.vercel.app/",
+  },
+  {
     title: "Burger Casa",
     description: translations.en.projects.burgerCasa,
     tech: ["NestJs", "NestJs", "SupaBase", "TypeOrm"],
@@ -14,13 +35,6 @@ export const projectsData = [
     tech: ["Next.js", "SupaBase", "Tailwind CSS"],
     image: "/arte-casa.png",
     link: "https://www.arteincasatua.com/",
-  },
-  {
-    title: "Reservy",
-    description: translations.en.projects.reservy,
-    tech: ["NextJs", "NestJs", "SupaBase", "Shadcn/ui"],
-    image: "/reservy-hotel.png",
-    link: "https://reservy-hotel.vercel.app/",
   },
   {
     title: "Recipe Vault",

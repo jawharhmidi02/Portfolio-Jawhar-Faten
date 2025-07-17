@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Users, Github, Linkedin, Mail } from "lucide-react";
+import { Phone, MapPin, Code2, Github, Linkedin, Mail } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { teamData } from "@/lib/data/team";
 
@@ -9,20 +9,23 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="py-12 px-4 bg-gray-900 text-white">
+    <footer className="py-16 px-4 bg-gradient-to-b from-slate-900 to-slate-950 text-white">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center flame-glow">
-                <Users className="h-4 w-4 text-white" />
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Code2 className="h-5 w-5 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full animate-pulse"></div>
               </div>
-              <span className="text-xl font-bold">Synergy Team</span>
+              <span className="text-xl font-bold">Developer Portfolio</span>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-400 text-sm leading-relaxed">
               Creating digital excellence through collaboration and innovation.
-              Two passionate developers, one powerful team.
+              Two passionate developers crafting exceptional web experiences.
             </p>
           </div>
 
@@ -33,7 +36,7 @@ export function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-slate-400 hover:text-white transition-colors hover:translate-x-1 inline-block"
                 >
                   About Us
                 </a>
@@ -41,7 +44,7 @@ export function Footer() {
               <li>
                 <a
                   href="#projects"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-slate-400 hover:text-white transition-colors hover:translate-x-1 inline-block"
                 >
                   Projects
                 </a>
@@ -49,7 +52,7 @@ export function Footer() {
               <li>
                 <a
                   href="#skills"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-slate-400 hover:text-white transition-colors hover:translate-x-1 inline-block"
                 >
                   Skills
                 </a>
@@ -57,7 +60,7 @@ export function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-slate-400 hover:text-white transition-colors hover:translate-x-1 inline-block"
                 >
                   Contact
                 </a>
@@ -67,52 +70,52 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4 text-green-400">Services</h4>
+            <h4 className="font-semibold mb-4 text-emerald-400">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-400">Web Development</li>
-              <li className="text-gray-400">Mobile Apps</li>
-              <li className="text-gray-400">UI/UX Design</li>
-              <li className="text-gray-400">Consulting</li>
+              <li className="text-slate-400">Full-Stack Development</li>
+              <li className="text-slate-400">UI/UX Design</li>
+              <li className="text-slate-400">Mobile Applications</li>
+              <li className="text-slate-400">Technical Consulting</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-2 text-purple-400">Contact Info</h4>
-            <div className="space-y-1 text-sm text-gray-400">
-              <p className="flex flex-row items-center gap-1">
-                <Mail className="h-4 w-4" />
-                {teamData.jawhar.email}
-              </p>
-              <p className="flex flex-row items-center gap-1">
-                <Phone className="h-4 w-4" />
-                {teamData.jawhar.phone}
-              </p>
-              <p className="flex flex-row items-center gap-1">
-                <Mail className="h-4 w-4" />
-                {teamData.faten.email}
-              </p>
-              <p className="flex flex-row items-center gap-1">
-                <Phone className="h-4 w-4" />
-                {teamData.faten.phone}
-              </p>
-              <p className="flex flex-row items-center gap-1">
-                <MapPin className="h-4 w-4" />
-                {teamData.synergy.location}
-              </p>
+            <h4 className="font-semibold mb-4 text-purple-400">Contact Info</h4>
+            <div className="space-y-3 text-sm text-slate-400">
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4 text-blue-400" />
+                <span>{teamData.jawhar.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-emerald-400" />
+                <span>{teamData.jawhar.phone}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4 text-blue-400" />
+                <span>{teamData.faten.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-emerald-400" />
+                <span>{teamData.faten.phone}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-4 w-4 text-purple-400" />
+                <span>{teamData.synergy.location}</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Synergy Team. {t.footer.rights}
+        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-slate-400 text-sm">
+            © {new Date().getFullYear()} Developer Portfolio. {t.footer.rights}
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Button
               variant="ghost"
               size="sm"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all"
+              className="text-slate-400 hover:text-white hover:scale-110 transition-all rounded-full"
               asChild
             >
               <a
@@ -126,7 +129,7 @@ export function Footer() {
             <Button
               variant="ghost"
               size="sm"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all"
+              className="text-slate-400 hover:text-white hover:scale-110 transition-all rounded-full"
               asChild
             >
               <a
@@ -140,7 +143,7 @@ export function Footer() {
             <Button
               variant="ghost"
               size="sm"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all"
+              className="text-slate-400 hover:text-white hover:scale-110 transition-all rounded-full"
               asChild
             >
               <a href={`mailto:${teamData.jawhar.email}`}>

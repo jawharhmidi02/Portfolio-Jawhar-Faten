@@ -62,7 +62,7 @@ const generateClientEmail = (data: any) => `
       <p>Best regards,<br>Jawhar & Faten<br>Synergy Team</p>
     </div>
     <div class="footer">
-      <p>© 2024 Synergy Team. All rights reserved.</p>
+      <p>© ${new Date().getFullYear()} Synergy Team. All rights reserved.</p>
     </div>
   </div>
 </body>

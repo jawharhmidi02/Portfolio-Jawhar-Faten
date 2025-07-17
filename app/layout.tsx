@@ -8,14 +8,14 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Synergy Team - Professional Web Development Duo",
+  title: "Portfolio - Professional Web Development Duo",
   description:
     "Jawhar Hmidi & Faten Selmi - Award-winning web developers creating exceptional digital experiences through collaboration and innovation.",
   keywords:
     "web development, full-stack, frontend, backend, NextJs, Vue.js, NestJs, team portfolio",
   authors: [{ name: "Jawhar Hmidi" }, { name: "Faten Selmi" }],
   openGraph: {
-    title: "Synergy Team - Professional Web Development",
+    title: "Portfolio - Professional Web Development",
     description:
       "Two passionate developers creating digital excellence together",
     type: "website",

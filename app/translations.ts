@@ -2,15 +2,15 @@ export const translations = {
   en: {
     hero: {
       subtitle:
-        "Where Innovation Meets Collaboration - Two Passionate Developers Creating Digital Excellence Together",
-      viewProjects: "View Our Projects",
-      contactUs: "Contact Us",
+        "We are two passionate developers creating exceptional digital experiences through innovative full-stack solutions and beautiful user interfaces.",
+      viewProjects: "View Our Work",
+      contactUs: "Get In Touch",
     },
     about: {
-      title: "About Synergy Team",
-      synergyTitle: "The Power of Synergy",
+      title: "About Us",
+      synergyTitle: "The Power of Collaboration",
       synergyDescription:
-        "When Jawhar's technical expertise meets Faten's creative vision, magic happens. Our complementary skills create solutions that are not just functional, but exceptional. Together, we've built award-winning applications and continue to push the boundaries of what's possible in web development.",
+        "When Jawhar's technical expertise meets Faten's creative vision, exceptional digital solutions are born. Our complementary skills create applications that are not just functional, but truly remarkable. Together, we've built award-winning projects and continue to push the boundaries of modern web development.",
     },
     team: {
       jawhar: {
@@ -21,11 +21,15 @@ export const translations = {
       faten: {
         role: "Frontend Developer & UI/UX Designer",
         description:
-          "Creative frontend developer with a keen eye for design and user experience. Expert in Vue.js, responsive design, and creating intuitive user interfaces that users love.",
+          "Creative frontend developer with a keen eye for design and user experience. Expert in NextJs, responsive design, and creating intuitive user interfaces that users love.",
       },
     },
     projects: {
-      title: "Our Collaborative Projects",
+      title: "Featured Projects",
+      arabiya:
+        "E-commerce platform for a Tunisian cosmetic company with client interface and admin dashboard.",
+      goldenbrand:
+        "E-commerce and portfolio website for a Qatari stainless steel company with multi-language support and admin dashboard.",
       burgerCasa:
         "A modern restaurant management system with online ordering, inventory tracking, and customer management features.",
       arteCasa:
@@ -49,15 +53,15 @@ export const translations = {
         "Second place in algorithmic problem solving competition",
     },
     skills: {
-      title: "Our Combined Expertise",
+      title: "Our Technical Expertise",
       frontend: "Frontend Development",
       backend: "Backend Development",
       design: "Design & UX",
     },
     contact: {
-      title: "Ready to Work Together?",
+      title: "Let's Work Together",
       subtitle:
-        "Let's discuss your project and create something amazing together",
+        "Ready to bring your ideas to life? Let's discuss your project and create something amazing together.",
       email: "Send Email",
       schedule: "Schedule Meeting",
     },
@@ -68,15 +72,15 @@ export const translations = {
   fr: {
     hero: {
       subtitle:
-        "Où l'Innovation Rencontre la Collaboration - Deux Développeurs Passionnés Créant l'Excellence Numérique Ensemble",
+        "Nous sommes deux développeurs passionnés créant des expériences numériques exceptionnelles grâce à des solutions full-stack innovantes et de belles interfaces utilisateur.",
       viewProjects: "Voir Nos Projets",
       contactUs: "Nous Contacter",
     },
     about: {
-      title: "À Propos de Synergy Team",
-      synergyTitle: "Le Pouvoir de la Synergie",
+      title: "À Propos de Nous",
+      synergyTitle: "Le Pouvoir de la Collaboration",
       synergyDescription:
-        "Quand l'expertise technique de Jawhar rencontre la vision créative de Faten, la magie opère. Nos compétences complémentaires créent des solutions qui ne sont pas seulement fonctionnelles, mais exceptionnelles. Ensemble, nous avons créé des applications primées et continuons à repousser les limites du développement web.",
+        "Quand l'expertise technique de Jawhar rencontre la vision créative de Faten, des solutions numériques exceptionnelles naissent. Nos compétences complémentaires créent des applications qui ne sont pas seulement fonctionnelles, mais vraiment remarquables. Ensemble, nous avons créé des projets primés et continuons à repousser les limites du développement web moderne.",
     },
     team: {
       jawhar: {
@@ -87,11 +91,11 @@ export const translations = {
       faten: {
         role: "Développeuse Frontend & Designer UI/UX",
         description:
-          "Développeuse frontend créative avec un œil aiguisé pour le design et l'expérience utilisateur. Experte en Vue.js, design responsive et création d'interfaces utilisateur intuitives que les utilisateurs adorent.",
+          "Développeuse frontend créative avec un œil aiguisé pour le design et l'expérience utilisateur. Experte en NextJs, design responsive et création d'interfaces utilisateur intuitives que les utilisateurs adorent.",
       },
     },
     projects: {
-      title: "Nos Projets Collaboratifs",
+      title: "Projets en Vedette",
       burgerCasa:
         "Un système moderne de gestion de restaurant avec commande en ligne, suivi des stocks et fonctionnalités de gestion client.",
       arteCasa:
@@ -115,15 +119,15 @@ export const translations = {
         "Deuxième place dans une compétition de résolution de problèmes algorithmiques",
     },
     skills: {
-      title: "Notre Expertise Combinée",
+      title: "Notre Expertise Technique",
       frontend: "Développement Frontend",
       backend: "Développement Backend",
       design: "Design & UX",
     },
     contact: {
-      title: "Prêt à Travailler Ensemble?",
+      title: "Travaillons Ensemble",
       subtitle:
-        "Discutons de votre projet et créons quelque chose d'incroyable ensemble",
+        "Prêt à donner vie à vos idées ? Discutons de votre projet et créons quelque chose d'incroyable ensemble.",
       email: "Envoyer Email",
       schedule: "Planifier Réunion",
     },

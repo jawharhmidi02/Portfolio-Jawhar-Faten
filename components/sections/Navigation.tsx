@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Users, Languages, Moon, Sun, Menu, X } from "lucide-react";
+import { Code2, Languages, Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { cn } from "@/lib/utils";
@@ -26,7 +26,6 @@ export function Navigation() {
         "home",
         "about",
         "projects",
-        "testimonials",
         "achievements",
         "skills",
         "contact",
@@ -72,7 +71,6 @@ export function Navigation() {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
   ];
@@ -81,21 +79,24 @@ export function Navigation() {
     <>
       <nav
         className={cn(
-          "fixed top-0 w-full z-50 transition-all duration-300",
+          "fixed top-0 w-full z-50 transition-all duration-500",
           scrolled
-            ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md"
+            ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg border-b border-slate-200/50 dark:border-slate-700/50"
             : "bg-transparent"
         )}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <div className="flex items-center space-x-2 z-20">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center flame-glow">
-                <Users className="h-4 w-4 text-white" />
+            <div className="flex items-center space-x-3 z-20">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Code2 className="h-5 w-5 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full animate-pulse"></div>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-                Synergy Team
+              <span className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+                Portfolio
               </span>
             </div>
 
@@ -108,15 +109,15 @@ export function Navigation() {
                   size="sm"
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "relative px-3 py-2 transition-all duration-300 hover:scale-105",
+                    "relative px-4 py-2 transition-all duration-300 hover:scale-105 rounded-full",
                     activeSection === item.id
-                      ? "text-blue-600 dark:text-blue-400 font-medium"
-                      : "text-gray-700 dark:text-gray-300"
+                      ? "text-blue-600 dark:text-blue-400 font-medium bg-blue-50 dark:bg-blue-900/20"
+                      : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
                   )}
                 >
                   {item.label}
                   {activeSection === item.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-green-500 transform scale-x-100 transition-transform duration-300" />
+                    <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full" />
                   )}
                 </Button>
               ))}
@@ -128,17 +129,19 @@ export function Navigation() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setLanguage(language === "en" ? "fr" : "en")}
-                className="flex items-center space-x-2 hover:scale-105 transition-transform"
+                className="flex items-center space-x-2 hover:scale-105 transition-transform rounded-full"
               >
                 <Languages className="h-4 w-4" />
-                <span>{language === "en" ? "FR" : "EN"}</span>
+                <span className="text-sm font-medium">
+                  {language === "en" ? "FR" : "EN"}
+                </span>
               </Button>
 
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="hover:scale-105 transition-transform"
+                className="hover:scale-105 transition-transform rounded-full"
               >
                 {theme === "dark" ? (
                   <Sun className="h-4 w-4" />
@@ -154,7 +157,7 @@ export function Navigation() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors"
               >
                 {isMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -167,20 +170,18 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - Separate from nav for proper positioning */}
+      {/* Mobile Menu Overlay */}
       <div
         className={cn(
           "fixed inset-0 z-40 md:hidden transition-all duration-300 ease-in-out",
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}
       >
-        {/* Background overlay */}
         <div
-          className="absolute inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md"
+          className="absolute inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl"
           onClick={() => setIsMenuOpen(false)}
         />
 
-        {/* Menu content */}
         <div className="relative z-10 flex flex-col justify-center items-center h-full w-full px-8">
           <div className="flex flex-col items-center space-y-6 w-full max-w-sm mt-12">
             {navItems.map((item, index) => (
@@ -190,22 +191,22 @@ export function Navigation() {
                 size="lg"
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "w-full text-lg justify-center transition-all duration-300 hover:scale-105",
+                  "w-full text-lg justify-center transition-all duration-300 hover:scale-105 rounded-xl",
                   activeSection === item.id
                     ? "text-blue-600 dark:text-blue-400 font-medium bg-blue-50 dark:bg-blue-900/20"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                 )}
               >
                 {item.label}
               </Button>
             ))}
 
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-8 border-t border-gray-200 dark:border-gray-700 w-full">
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-8 border-t border-slate-200 dark:border-slate-700 w-full">
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setLanguage(language === "en" ? "fr" : "en")}
-                className="flex items-center space-x-2 w-full sm:w-auto justify-center"
+                className="flex items-center space-x-2 w-full sm:w-auto justify-center rounded-full"
               >
                 <Languages className="h-4 w-4" />
                 <span>{language === "en" ? "Français" : "English"}</span>
@@ -215,7 +216,7 @@ export function Navigation() {
                 variant="outline"
                 size="sm"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="flex items-center space-x-2 w-full sm:w-auto justify-center"
+                className="flex items-center space-x-2 w-full sm:w-auto justify-center rounded-full"
               >
                 {theme === "dark" ? (
                   <Sun className="h-4 w-4" />

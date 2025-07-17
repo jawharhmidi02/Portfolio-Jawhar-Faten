@@ -7,17 +7,24 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingElements } from "@/components/ui/FloatingElements";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
+import { WelcomeAnimation } from "@/components/ui/WelcomeAnimation";
 
-export default function SynergyTeamPortfolio() {
+export default function DeveloperPortfolio() {
   const [mounted, setMounted] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+
+    const timer = setTimeout(() => {
+      setShowWelcome(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (!mounted) {
@@ -26,17 +33,19 @@ export default function SynergyTeamPortfolio() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-blue-950 dark:via-gray-900 dark:to-green-950 overflow-x-hidden">
+      {showWelcome && <WelcomeAnimation />}
+      <div
+        className={`min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-gray-900 dark:to-blue-950 overflow-x-hidden transition-opacity duration-1000 ${
+          showWelcome ? "opacity-0" : "opacity-100"
+        }`}
+      >
         <FloatingElements />
         <Navigation />
-        <div id="home">
-          <HeroSection />
-        </div>
+        <HeroSection />
         <AboutSection />
         <ProjectsSection />
-        <TestimonialsSection />
-        <AchievementsSection />
         <SkillsSection />
+        <AchievementsSection />
         <ContactSection />
         <Footer />
       </div>

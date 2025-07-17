@@ -5,11 +5,10 @@ export const skillsData = {
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
-    "+10 More",
+    "+5 More",
   ],
   backend: [
     "NestJs",
-    "Django",
     "PostgreSQL",
     "SupaBase",
     "FireBase",
