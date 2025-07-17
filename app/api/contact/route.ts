@@ -290,7 +290,7 @@ const generateClientEmail = (data: any) => `
     </div>
     <div class="footer">
       <div class="footer-brand">Developer Portfolio</div>
-      <p style="margin: 0; opacity: 0.8;">© 2024 Professional Developer Portfolio. All rights reserved.</p>
+      <p style="margin: 0; opacity: 0.8;">© ${new Date().getFullYear()} Professional Developer Portfolio. All rights reserved.</p>
       <p style="margin: 10px 0 0 0; opacity: 0.6; font-size: 12px;">
         This is an automated response. We'll get back to you personally soon!
       </p>
