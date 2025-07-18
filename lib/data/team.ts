@@ -23,7 +23,7 @@ export const teamData = {
     portfolio: "https://fatenselmi.vercel.app/",
     github: "https://github.com/selmifaten",
     linkedin: "https://linkedin.com/in/fatenselmi",
-    avatar: "/faten-pfp.jpg",
+    avatar: null,
   },
   synergy: {
     location: "Medenine, Tunisia",
