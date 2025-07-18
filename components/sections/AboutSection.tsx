@@ -140,7 +140,7 @@ export function AboutSection() {
                 <div className="relative">
                   <Avatar className="w-20 h-20 ring-4 ring-emerald-200 dark:ring-emerald-700 group-hover:ring-emerald-400 dark:group-hover:ring-emerald-500 transition-all duration-300">
                     <AvatarImage
-                      src={teamData.faten.avatar || "/placeholder.svg"}
+                      // src={teamData.faten.avatar || "/placeholder.svg"}
                       alt="Faten"
                     />
                     <AvatarFallback className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-lg">

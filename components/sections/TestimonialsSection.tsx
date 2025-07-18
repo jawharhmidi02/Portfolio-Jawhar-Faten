@@ -33,7 +33,7 @@ export function TestimonialsSection() {
                 <div className="flex items-center space-x-4">
                   <Avatar className="w-12 h-12">
                     <AvatarImage
-                      src={testimonial.avatar || "/placeholder.svg"}
+                      // src={testimonial.avatar || "/placeholder.svg"}
                       alt={testimonial.name}
                     />
                     <AvatarFallback>

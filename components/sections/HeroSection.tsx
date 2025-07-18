@@ -158,7 +158,7 @@ export function HeroSection() {
               <div className="relative mb-4">
                 <Avatar className="w-24 h-24 mx-auto ring-4 ring-emerald-200 dark:ring-emerald-800 group-hover:ring-emerald-400 dark:group-hover:ring-emerald-600 transition-all duration-300 group-hover:scale-110">
                   <AvatarImage
-                    src={teamData.faten.avatar || "/placeholder.svg"}
+                    // src={teamData.faten.avatar || "/placeholder.svg"}
                     alt="Faten"
                   />
                   <AvatarFallback className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-lg">
